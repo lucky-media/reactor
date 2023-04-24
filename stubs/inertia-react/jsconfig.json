@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": "../inertia-common",
+        "paths": {
+            "@/*": ["resources/js/*"]
+        }
+    },
+    "exclude": ["node_modules", "public"]
+}
