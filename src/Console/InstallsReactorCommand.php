@@ -20,6 +20,11 @@ trait InstallsReactorCommand
         }
 
         // Install Ide Helper
+        if (! $this->requireComposerPackages(['barryvdh/laravel-debugbar:^3.8'], true)) {
+            return 1;
+        }
+
+        // Install Laravel Debugbar
         if (! $this->requireComposerPackages(['barryvdh/laravel-ide-helper:^2.13'], true)) {
             return 1;
         }
