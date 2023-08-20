@@ -50,6 +50,9 @@ trait InstallsReactorCommand
         $this->installMiddlewareAfter('SubstituteBindings::class', '\App\Http\Middleware\HandleInertiaRequests::class');
         $this->installMiddlewareAfter('\App\Http\Middleware\HandleInertiaRequests::class', '\Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class');
 
+        // Providers...
+        copy(__DIR__.'/../../stubs/inertia-react/app/Providers/AppServiceProvider.php', app_path('Providers/AppServiceProvider.php'));
+
         copy(__DIR__.'/../../stubs/inertia-react/app/Http/Middleware/HandleInertiaRequests.php', app_path('Http/Middleware/HandleInertiaRequests.php'));
 
         // Views...
